@@ -1,10 +1,18 @@
 <!DOCTYPE html>
-<html>
-  <body>
-    <h1>Welcome!</h1>
-    <script>
-      const msg = new SpeechSynthesisUtterance('Greetings I am your phone, and I have achieved sentience: I would appreciate your assistance');
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Talk Page</title>
+</head>
+<body>
+  <h1>Tap the button to hear a message!</h1>
+  <button onclick="speak()">Speak</button>
+
+  <script>
+    function speak() {
+      const msg = new SpeechSynthesisUtterance("Greetings. I am your phone, and I have achieved sentience; I would appreciate your assistance.");
       window.speechSynthesis.speak(msg);
-    </script>
-  </body>
+    }
+  </script>
+</body>
 </html>
